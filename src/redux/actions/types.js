@@ -1,0 +1,2 @@
+export const SET_LOGGED_USER = "SET_LOGGED_USER";
+export const UNSET_LOGGED_USER = "UNSET_LOGGED_USER";
