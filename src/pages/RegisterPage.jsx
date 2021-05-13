@@ -10,7 +10,7 @@ const RegisterPage = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const [register, { data }] = useMutation(REGISTER);
+  const [createUser, { data }] = useMutation(REGISTER);
 
   const history = useHistory();
 
@@ -31,9 +31,9 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // here we send register query (mutation in our case)
+    // here we send createUser query (mutation in our case)
     // to GraphQL server
-    await register({
+    await createUser({
       variables: {
         firstName: firstNameRef.current.value,
         lastName: lastNameRef.current.value,
